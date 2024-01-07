@@ -49,6 +49,7 @@ namespace SistemaEstacionamento
                     int multipliedValue = (valorInicial + (int)Diference.TotalHours * 2);
                     string formattedValue = multipliedValue.ToString("C", CultureInfo.GetCultureInfo("pt-BR"));
 
+                    Console.WriteLine("Veículo removido.");
                     Console.WriteLine($"Valor total a ser pago: {formattedValue}");
                     return;
                 }

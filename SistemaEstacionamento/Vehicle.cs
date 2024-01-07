@@ -11,10 +11,10 @@ namespace SistemaEstacionamento
         public string Placa { get; private set; }
         public string Marca { get; private set; }
         public string Modelo { get; private set; }
-        public string Ano { get; private set; }
+        public int Ano { get; private set; }
         public DateTime Entrada { get; private set; }
 
-        public Vehicle(string placa, string marca, string modelo, string ano)
+        public Vehicle(string placa, string marca, string modelo, int ano)
         {
             Placa = placa;
             Marca = marca;

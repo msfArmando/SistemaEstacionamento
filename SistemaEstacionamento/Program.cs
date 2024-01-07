@@ -31,7 +31,8 @@ namespace SistemaEstacionamento
                     {
                         case 1:
 
-                            string placa, marca, modelo, ano;
+                            string placa, marca, modelo;
+                            int ano;
 
                             Console.Write("Digite a placa: ");
                             placa = Console.ReadLine();
@@ -43,7 +44,14 @@ namespace SistemaEstacionamento
                             modelo = Console.ReadLine();
 
                             Console.Write("Digite o ano: ");
-                            ano = Console.ReadLine();
+                            try
+                            {
+                                ano = Int32.Parse(Console.ReadLine());
+                            }
+                            catch (Exception)
+                            {
+                                throw new Exception("Formato de ano inválido.");
+                            }
 
                             Vehicle veiculo = new Vehicle(placa, marca, modelo, ano);
 
