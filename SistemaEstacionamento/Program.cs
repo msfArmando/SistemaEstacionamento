@@ -25,7 +25,14 @@ namespace SistemaEstacionamento
                 {
                     Console.WriteLine("====================================");
                     Console.WriteLine("Escolha uma das opções disponíveis: ");
-                    option = Int32.Parse(Console.ReadLine());
+                    try
+                    {
+                        option = Int32.Parse(Console.ReadLine());
+                    }
+                    catch (Exception)
+                    {
+                        throw new Exception("Opção inválida");
+                    }
 
                     switch (option)
                     {
@@ -80,7 +87,7 @@ namespace SistemaEstacionamento
 
                             break;
                         default:
-                            break;
+                            throw new Exception("Opção indisponível.");
                     }
                 }
                 catch (Exception ex)

@@ -25,6 +25,10 @@ namespace SistemaEstacionamento
                 {
                     if (veiculo.Placa == veiculoLista.Placa)
                         throw new Exception("Não foi possível estacionar o veículo pois o mesmo já está estacionado.");
+                    else if(veiculo.Ano < 1884 || veiculo.Ano > 2024)
+                    {
+                        throw new Exception("Ano de carro inválido.");
+                    }
                 }
                 VeiculosEstacionados.Add(veiculo);
                 Console.WriteLine("Carro estacionado.");
